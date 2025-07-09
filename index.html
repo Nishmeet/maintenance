@@ -28,12 +28,13 @@
         }
 
         body { 
+            background:  url('img1.jpeg') center center/cover no-repeat;
             font-family: sans-serif; 
             text-align: center; 
             padding: 15px; 
-            color: #333;
-            background: linear-gradient(-45deg, #f0f8ff, #e6f3ff, #f0f8ff, #e6f3ff);
-            background-size: 400% 400%;
+          
+            background-size: 120% 100%; 
+            
             animation: gradientShift 8s ease infinite;
             min-height: 100vh;
             margin: 0;
@@ -87,9 +88,19 @@
             margin-bottom: 8px;
             animation: fadeInUp 1s ease-out 0.05s both;
         }
+
+        body::before {
+          content: "";
+          position: fixed;
+          inset: 0;
+          background: rgba(255,255,255,0.7);
+          z-index: 0;
+          pointer-events: none;
+        }
     </style>
 </head>
 <body>
+  
     <div class="container">
         <div class="logo-bg">
             <img src="LOGO.png" alt="Airliners Logo" style="width:180px; margin-bottom: 0; animation: fadeInUp 1s ease-out 0.1s both;" />
@@ -100,7 +111,7 @@
             Our crew is currently hard at work making some improvements to the Airliners website to better serve you. The search engine is temporarily unavailable, but we will be back soon!
         </p>
         <p class="contact-info">
-            Thank you for your patience. For urgent inquiries, please contact us at <strong>online@airliners.ca or  or call us at 877-727-6387.
+            Thank you for your patience. For urgent inquiries, please contact us at <strong>online@airliners.ca or  or call us at 877-727-6387
             </strong>
         </p>
     </div>
